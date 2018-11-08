@@ -1,15 +1,19 @@
 {
-  "name": "flux",
+  "name": "bikeflux",
   "version": "1.0.0",
-  "description": "",
+  "description": "My package for implamentation of flux framework",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Olga",
   "license": "ISC",
   "devDependencies": {
     "typescript": "^3.1.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OlgaMyazina/bikeFlux"
   }
 }
