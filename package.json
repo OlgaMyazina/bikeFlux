@@ -2,7 +2,7 @@
   "name": "bikeflux",
   "version": "1.0.0",
   "description": "My package for implamentation of flux framework",
-  "main": "index.js",
+  "main": "store.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

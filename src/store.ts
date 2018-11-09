@@ -1,10 +1,8 @@
-//import allReducerInterface from '../reducer';
-
 export default class Store {
-  reducer: any;
-  state: any;
+  reducer: { (state: object, action: object): object };
+  state: object;
   listeners: { (): void }[];
-  constructor(reducer: any, state: any) {
+  constructor(reducer: { (): object }, state: object) {
     this.reducer = reducer;
     this.state = state;
     this.listeners = [];
@@ -12,12 +10,12 @@ export default class Store {
   getState() {
     return this.state;
   }
-  dispatch(action: any) {
+  dispatch(action: object) {
     this.state = this.reducer(this.state, action);
     this.listeners.forEach(listener => listener());
     return action;
   }
-  subscribe(newListener: any) {
+  subscribe(newListener: { (): void }) {
     this.listeners.push(newListener);
   }
 }
