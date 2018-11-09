@@ -1,11 +1,11 @@
 export interface IAction {
-  [propName: string]: string | IProps;
+  [propName: string]: string | IProps[];
 }
 interface IProps {
   [propName: string]: string;
 }
 export interface IState {
-  [propName: string]: string | IProps;
+  [propName: string]: string | IProps[];
 }
 export default class Store {
   reducer: { (state: IState, action: IAction): IState };
