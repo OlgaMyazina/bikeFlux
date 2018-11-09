@@ -15,5 +15,11 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/OlgaMyazina/bikeFlux"
+  },
+  "types": "./src/store.d.ts",
+  "dependencies": {
+    "bikeflux": "latest",
+    "@types/bikeflux": "latest",
+    "typescript": "next"
   }
 }
