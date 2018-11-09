@@ -16,5 +16,5 @@
     "type": "git",
     "url": "git+https://github.com/OlgaMyazina/bikeFlux"
   },
-  "types": "./src/store.d.ts"
+  "types": "bikeflux"
 }
