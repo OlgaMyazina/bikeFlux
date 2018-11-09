@@ -1,16 +1,25 @@
+export interface IAction {
+  [propName: string]: string | IProps;
+}
+interface IProps {
+  [propName: string]: string;
+}
+export interface IState {
+  [propName: string]: string | IProps;
+}
 export default class Store {
-  reducer: { (state: object, action: object): object };
-  state: object;
+  reducer: { (state: IState, action: IAction): IState };
+  state: IState;
   listeners: { (): void }[];
-  constructor(reducer: { (): object }, state: object) {
+  constructor(reducer: { (): IAction }, state: IState) {
     this.reducer = reducer;
     this.state = state;
     this.listeners = [];
   }
-  getState() {
+  getState(): IState {
     return this.state;
   }
-  dispatch(action: object) {
+  dispatch(action: IAction) {
     this.state = this.reducer(this.state, action);
     this.listeners.forEach(listener => listener());
     return action;

@@ -4,6 +4,7 @@
   "description": "My package for implamentation of flux framework",
   "main": "store.js",
   "scripts": {
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
